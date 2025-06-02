@@ -1,0 +1,38 @@
+📘 What is SortedMap in Java?
+SortedMap is a subinterface of Map that maintains its keys in a sorted (ascending) order. It is part of the Java
+Collections Framework and is most commonly implemented by TreeMap.
+
+🧩 Key Features of SortedMap
+|--> Sorted by natural order (e.g., Integer, String) or a custom comparator.
+|--> No null keys allowed in TreeMap (most common implementation).
+|--> Keys must implement Comparable or be accepted by the provided Comparator.
+|--> Provides additional methods like firstKey(), lastKey(), headMap(), tailMap(), and subMap().
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+SortedMap_Demo.java
+
+🧠 Short Notes on Each Method
+
+< Method >	        < Description >
+put(K, V)	        |--> Adds or updates a key-value pair in sorted order.
+get(Object key)	    |--> Retrieves the value associated with the key.
+remove(Object key)	|--> Removes the key-value pair for the key.
+containsKey()	    |--> Checks if a specific key exists.
+containsValue()	    |--> Checks if a specific value exists.
+size()	            |--> Returns the number of entries.
+isEmpty()	        |--> Checks if the map is empty.
+keySet()	        |--> Returns a sorted set of keys.
+values()	        |--> Returns a collection of values in key order.
+entrySet()	        |--> Returns a set of key-value pairs in key order.
+firstKey()	        |--> Returns the lowest (first) key.
+lastKey()	        |--> Returns the highest (last) key.
+headMap(K toKey)	|--> Returns a view of the map with keys < toKey.
+tailMap(K fromKey)	|--> Returns a view of the map with keys ≥ fromKey.
+subMap(K fromKey, K toKey)	|--> Returns a view of the map with keys in range.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Summary
+|--> SortedMap is ideal for situations where you need to maintain natural or custom order of keys.
+|--> Use TreeMap to implement it.
+|--> Provides powerful range-based operations.

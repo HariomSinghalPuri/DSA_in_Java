@@ -1,0 +1,46 @@
+⚙️ What is ConcurrentMap in Java?
+ConcurrentMap is a thread-safe extension of the Map interface that allows safe access and updates from multiple threads
+without external synchronization.
+Main implementation: ConcurrentHashMap
+Belongs to java.util.concurrent package.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+
+🧩 Key Features of ConcurrentMap
+
+< Features >	     < Description >
+Thread-safe	        |--> Allows concurrent read/write access by multiple threads.
+High performance	|--> Uses segmented locking or non-blocking algorithms for speed.
+No null keys/values	|--> Throws NullPointerException if nulls are used.
+Atomic operations	|--> Provides putIfAbsent, remove(key, value), replace atomically.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+ConcurrentMap_Demo.java
+
+🧠 Short Notes on Each Method
+
+< Method >	                < Description >
+put(K, V)	                |--> Adds or updates a mapping.
+get(Object key)	            |--> Retrieves value for the given key.
+putIfAbsent(K, V)           |--> Adds only if key is absent.
+remove(Object key)	        |--> Removes entry for the key.
+remove(K, V)	            |--> Removes only if key maps to given value.
+replace(K, V)	            |--> Replaces value for the key.
+replace(K, oldV, newV)	    |--> Replaces value only if it matches old value.
+containsKey(Object key)	    |--> Checks if map has the key.
+containsValue(Object value)	|--> Checks if map contains the value.
+keySet()	                |--> Returns all keys.
+values()	                |--> Returns all values.
+entrySet()	                |--> Returns all key-value pairs.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ When to Use ConcurrentMap
+Use it when:
+|--> Multiple threads need to read/write to the map safely.
+|--> You need atomic operations like putIfAbsent() or replace().
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+

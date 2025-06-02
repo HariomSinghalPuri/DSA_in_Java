@@ -1,0 +1,44 @@
+🧠 What is ConcurrentSkipListMap?
+ConcurrentSkipListMap is a thread-safe, sorted map that implements both ConcurrentNavigableMap and SortedMap.
+It uses a skip list data structure internally, allowing log(n) time complexity for most operations.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+🧩 Key Features of ConcurrentSkipListMap
+
+< Features >	        < Description >
+Thread-safe	            |--> Safe for concurrent access without external synchronization.
+Sorted keys	            |--> Maintains natural or custom ordering (like TreeMap).
+Lock-free reads/writes	|--> Non-blocking concurrency for high performance.
+Submaps and range views	|--> Supports operations like subMap, headMap, tailMap.
+Nulls not allowed	    |--> No null keys or values allowed.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+ConcurrentSkipListMap_Demo.java
+
+🧠 Short Notes on Each Method
+
+< Method >	             < Description >
+put(K, V)	            |--> Adds or updates a key-value pair.
+get(Object key)	        |--> Returns value for key.
+putIfAbsent(K, V)	    |--> Adds if key is not already present.
+remove(Object key)	    |--> Removes the entry with the given key.
+remove(K, V)	        |--> Removes entry if both key and value match.
+replace(K, V)	        |--> Replaces the value for a key.
+replace(K, oldV, newV)	|--> Replaces only if current value matches.
+lowerKey(K key)	        |--> Returns greatest key < given key.
+higherKey(K key)	    |--> Returns least key > given key.
+subMap(fromKey, fromInclusive, toKey, toInclusive)	|--> Returns a view of the map within the specified range.
+descendingMap()	        |--> Returns keys and values in reverse order.
+entrySet()	            |--> Returns all key-value pairs as a set.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ When to Use ConcurrentSkipListMap
+
+Use ConcurrentSkipListMap when:
+|--> You need a sorted and thread-safe map.
+|--> You want to perform range-based operations in concurrent environments.
+|--> You prefer lock-free performance with predictable ordering (natural or custom).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

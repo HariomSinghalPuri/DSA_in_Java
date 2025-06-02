@@ -1,0 +1,40 @@
+✅ Simple Explanation: What is LinkedHashSet?
+|--> LinkedHashSet is a class in the Java Collections Framework that implements the Set interface and extends HashSet,
+maintaining insertion order using a doubly-linked list.
+|--> It combines the uniqueness property of a HashSet with the order-preserving behavior of a list.
+|--> This means elements appear in the order in which they were inserted.
+|--> It’s ideal when you need unique elements and predictable iteration order.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features
+|---▶ Maintains insertion order using a linked list.
+|---▶ No duplicate elements — same as HashSet.
+|---▶ Allows one null element.
+|---▶ Unordered internally, but iteration is in insertion order.
+|---▶ Not synchronized — use Collections.synchronizedSet() for thread safety.
+|---▶ Backed internally by a HashMap with a linked list.
+|---▶ Good for caching, maintaining order history, or consistent iteration.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in LinkedHashSet_Demo.java :-
+
+Method	Description
+add(E e)	        |--> Adds the element if not already present; maintains insertion order.
+contains(Object o)	|--> Returns true if the set contains the element.
+remove(Object o)	|--> Removes the element from the set.
+size()	            |--> Returns the number of elements in the set.
+clear()	            |--> Removes all elements from the set.
+isEmpty()	        |--> Returns true if the set has no elements.
+for-each loop    	|--> Used to iterate in insertion order.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted :-
+
+|---▶ LinkedHashSet maintains insertion order, unlike HashSet.
+|---▶ Allows only one null value.
+|---▶ Duplicates are ignored silently — only unique elements stored.
+|---▶ Internally uses a linked list + hash table.
+|---▶ Iteration is predictable and faster than TreeSet (but no sorting).
+|---▶ Not thread-safe — for concurrent use, wrap with Collections.synchronizedSet().
+|---▶ Good for use cases like caches, order-preserving filters, or LRU structures.
+|---▶ Performance is close to HashSet with added overhead for maintaining order.

@@ -1,0 +1,66 @@
+Maps in Java - Short Note
+A Map in Java is a key-value pair collection that does not allow duplicate keys.
+It is part of the java.util package and is used for fast lookups, insertions, and deletions.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+📌 Key Features
+✔ Stores data in Key-Value pairs
+✔ Keys must be unique (duplicates override old values)
+✔ Values can be duplicated
+✔ Does not maintain insertion order (unless using LinkedHashMap)
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+------>>> HashMap:
+HashMap is a powerful data structure in Java that implements the Map interface and uses a
+hash table for storing key-value pairs. It provides efficient access and manipulation of data based on unique keys.
+
+=======>>> Tree of HashMap
+
+                          Map (Separate Interface)
+                         /       |        \       \__________
+                        /        |         \                 \
+                 HashMap     SortedMap   ConcurrentMap        EnumMap
+                   /              |             |
+     -------------               TreeMap   ConcurrentHashMap
+    |     |     |                  |             |
+    |     |     |             NavigableMap  ConcurrentSkipListMap
+    |     |     |
+Linked Weak Identity
+Hash   Hash     Hash
+Map    Map      Map
+
+           |
+      Hashtable (legacy)
+
+
+-->Core Concepts
+(1)Key-Value Pairs
+HashMap stores elements as key-value pairs where each key is unique. Keys are used to retrieve corresponding values.
+
+(2)Hashing Mechanism
+Internally, HashMap uses hashing to determine the storage location for elements. It applies a hash function to
+keys to compute their hash codes, converting these codes into array indices where the elements are stored.
+
+(3)Performance
+HashMap provides constant-time performance O(1) for basic operations like put(), get(), containsKey(),
+and remove(), assuming a good hash function and minimal collisions.
+
+(4)Null Handling
+HashMap allows a single null key and multiple null values.
+
+(5)Implementation Details
+Internal Structure
+HashMap uses an inner class Node<K,V> for storing mappings. It uses singly linked lists (buckets) to store elements
+at each index of the internal array.
+
+(6)Collision Handling
+When a collision occurs (two keys have the same hash code), HashMap uses separate chaining. It creates a linked list
+at the bucket location and adds the colliding elements to this list.
+
+(7)Resizing
+HashMap automatically resizes itself when the number of elements exceeds the product of its capacity and load factor.
+This process is called rehashing.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+

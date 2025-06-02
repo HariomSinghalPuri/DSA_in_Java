@@ -1,0 +1,104 @@
+IdentityHashMap is a class in Java's java.util package that implements the Map interface.
+Unlike most Map implementations in Java (like HashMap), IdentityHashMap uses reference equality (==) instead
+of object equality (equals()) when comparing keys and values.
+
+🔑 Key Points about IdentityHashMap
+--> 1. Reference Equality for Keys and Values
+--->>>Uses == and != to compare keys and values.
+--->>>This means two distinct objects that are .equals() but not == will be treated as different keys.
+
+```
+Map<String, String> map = new IdentityHashMap<>();
+map.put(new String("key"), "value1");
+map.put(new String("key"), "value2");
+System.out.println(map.size()); // Output: 2
+
+```
+
+With HashMap, the size would be 1 because the keys are .equals(), but IdentityHashMap treats them as different since they're different objects.
+
+-->2. No Guarantees on Ordering
+--->>>Like HashMap, IdentityHashMap does not guarantee the order of keys or values.
+
+-->3. Allows Null Keys and Values
+--->>>Like HashMap, it allows one null key and multiple null values.
+
+-->4. Performance Considerations
+--->>>Faster for use cases where identity comparison is sufficient or desired.
+--->>>Backed by a simple array, not hash buckets, making it lean but not as scalable for large maps.
+--->>>Not synchronized — must use synchronization if used in concurrent contexts.
+
+-->5. Typical Use Cases
+--->>>Caching or tracking where object identity is critical (e.g., dependency injection containers, serialization tracking).
+--->>>Preventing recursion or infinite loops when dealing with object graphs (e.g., in object serialization frameworks).
+
+-->6. Implementation Details
+--->>>Internally uses an Object[] array to store keys and values in alternating indices (key0, value0, key1, value1...).
+--->>>Hashing uses System.identityHashCode() instead of the usual hashCode() method.
+
+
+-->🚫 Differences from HashMap
+Feature	HashMap	IdentityHashMap
+Key comparison	.equals()	==
+Hash function	hashCode()	System.identityHashCode()
+Key uniqueness	Logical equality	Reference equality
+Use case	Most general-purpose maps	Identity-sensitive scenarios
+Performance in identity use cases	Slower due to .equals() calls	Faster in identity comparisons
+
+-->🛑 Caution
+--->>>Be very careful when using IdentityHashMap unless you really need reference-based key comparison.
+--->>>Not interchangeable with HashMap in most general-purpose code.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+IdentityHashMap.java --->
+
+-->🔹 1. put(K key, V value)
+--->>>Purpose: Inserts or updates a key-value pair.
+--->>>Note: Compares keys using ==, so two objects with the same content but different references are treated as different keys.
+
+-->🔹 2. get(Object key)
+--->>>Purpose: Retrieves the value associated with the given key.
+--->>>Note: Returns null if the key does not exist (or is not the same reference).
+
+-->🔹 3. remove(Object key)
+--->>>Purpose: Removes the mapping for the specified key.
+--->>>Note: Works only if the exact object reference is used (not just equal content).
+
+-->🔹 4. containsKey(Object key)
+--->>>Purpose: Checks if the map contains the specified key.
+--->>>Note: Uses == for comparison, not .equals().
+
+-->🔹 5. containsValue(Object value)
+--->>>Purpose: Checks if the map contains a specific value.
+--->>>Note: Uses == to compare values.
+
+-->🔹 6. size()
+--->>>Purpose: Returns the number of key-value pairs in the map.
+--->>>Note: Each unique object reference is counted as a separate entry.
+
+-->🔹 7. isEmpty()
+--->>>Purpose: Checks if the map has no entries.
+--->>>Note: Returns true only if size is 0.
+
+-->🔹 8. keySet()
+--->>>Purpose: Returns a Set view of all keys.
+--->>>Note: Changes to this set are reflected in the map and vice versa.
+
+-->🔹 9. values()
+--->>>Purpose: Returns a Collection view of all values.
+--->>>Note: Values can be accessed or modified via the returned collection.
+
+-->🔹 10. entrySet()
+--->>>Purpose: Returns a Set of key-value mappings (Map.Entry<K, V>).
+--->>>Note: Ideal for iterating over both keys and values simultaneously.
+
+-->🔹 11. putAll(Map<? extends K, ? extends V> m)
+--->>>Purpose: Copies all mappings from another map into this one.
+--->>>Note: If duplicate keys (by reference) are found, values are overwritten.
+
+-->🔹 12. clear()
+--->>>Purpose: Removes all entries from the map.
+--->>>Note: After calling this, isEmpty() will return true and size() will return 0.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

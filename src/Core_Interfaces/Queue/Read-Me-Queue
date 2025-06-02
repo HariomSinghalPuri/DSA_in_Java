@@ -1,0 +1,70 @@
+✅ Queue
+Queue is a linear data structure in Java that follows the FIFO (First-In-First-Out) principle. It is a part of the
+java.util package and is an interface. Elements are added at the rear (tail) and removed from the front (head).
+
+Java provides several implementations of the Queue interface, such as:
+|--> LinkedList
+|--> PriorityQueue
+|--> ArrayDeque
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+hierarchical tree structure of Queue :-
+
+Queue (Interface)
+     |
+     |---------------------------------------------|
+     |                     |                       |
+  Deque               BlockingQueue        PriorityQueue
+     |                     |
+     |                     |-------------------------------|
+     |                     |                               |
+ ArrayDeque         LinkedBlockingQueue         PriorityBlockingQueue
+     |                     |                               |
+ LinkedList       ArrayBlockingQueue         DelayQueue (specialized)
+                         |                               |
+               SynchronousQueue                LinkedTransferQueue
+                         |
+               LinkedTransferQueue
+
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+
+|--> Follows FIFO order.
+|--> Part of Java Collections Framework.
+|--> Can be bounded (e.g., ArrayBlockingQueue) or unbounded (e.g., LinkedList).
+|--> Allows null values in some implementations (e.g., LinkedList), but not in PriorityQueue.
+|--> Not thread-safe by default (ConcurrentLinkedQueue is used for thread-safe operations).
+|--> Some methods throw exceptions on failure (like add(), remove()), while others return special values (offer(), poll()).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+Queue_Demo.java
+
+✅ Explanation of Methods Used in Queue_Demo.java
+
+< Method >	         < Description >
+add(E e)	        |--> Inserts element into the queue. Throws exception if capacity is full.
+offer(E e)	        |--> Inserts element into the queue. Returns false if capacity is full (preferred over add()).
+peek()	            |--> Retrieves, but does not remove, the head of the queue. Returns null if the queue is empty.
+poll()	            |--> Retrieves and removes the head. Returns null if empty.
+remove()	        |--> Retrieves and removes the head. Throws NoSuchElementException if empty.
+size()	            |--> Returns the number of elements in the queue.
+isEmpty()	        |--> Returns true if the queue is empty.
+contains(Object o)	|--> Returns true if the queue contains the specified element.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points to Note :
+
+|--> Prefer offer() over add() in production to avoid exceptions.
+|--> Use poll() and peek() over remove() and element() to avoid exceptions when queue is empty.
+|--> Queue is an interface, so you must instantiate it using a class like LinkedList or PriorityQueue.
+|--> PriorityQueue does not maintain insertion order, but orders elements according to their natural order or comparator.
+|--> Deque (Double Ended Queue) extends Queue and allows insertion/removal from both ends (ArrayDeque, LinkedList).
+|--> For thread-safe queues, use ConcurrentLinkedQueue, BlockingQueue, etc.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+

@@ -1,0 +1,45 @@
+✅ Simple Explanation: What is ConcurrentLinkedDeque?
+ConcurrentLinkedDeque is a thread-safe, non-blocking, double-ended queue (Deque) implemented using a linked-node structure.
+It allows concurrent insertion, removal, and access from both ends — front and rear — without locking, using lock-free
+(CAS) algorithms.
+It is part of the java.util.concurrent package and ideal for highly concurrent environments.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ Thread-safe using non-blocking (lock-free) algorithms (like CAS).
+|---▶ Double-ended: Supports insertions/removals at both head and tail.
+|---▶ Unbounded: Dynamically grows as elements are added.
+|---▶ Non-blocking: Does not support blocking operations (put, take).
+|---▶ Null elements not allowed — throws NullPointerException.
+|---▶ Ideal for concurrent stack or deque implementations.
+|---▶ Better scalability under high concurrency.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in ConcurrentLinkedDeque_Demo.java
+
+Method	             Description
+addFirst(E e)	     |--> Inserts the specified element at the front of the deque. Throws NullPointerException if the element is null.
+addLast(E e)	     |--> Inserts the specified element at the rear of the deque.
+offerFirst(E e)    	 |--> Attempts to insert the element at the front; returns false if unsuccessful (never fails here).
+offerLast(E e)	     |--> Attempts to insert the element at the rear.
+peekFirst()	         |--> Returns (but does not remove) the front element; returns null if empty.
+peekLast()	         |--> Returns (but does not remove) the rear element; returns null if empty.
+pollFirst()          |--> Retrieves and removes the front element; returns null if empty.
+pollLast()	         |--> Retrieves and removes the rear element; returns null if empty.
+push(E e)	         |--> Pushes an element onto the stack (adds at the front).
+pop()	             |--> Removes and returns the top of the stack (removes from the front).
+contains(Object o)	 |--> Returns true if the deque contains the specified element.
+isEmpty()	         |--> Returns true if deque contains no elements.
+size()	             |--> Returns the number of elements (note: in concurrent use, may not be accurate instantly).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted:-
+
+|---▶ ConcurrentLinkedDeque is a lock-free alternative to LinkedBlockingDeque.
+|---▶ No blocking operations like put() or take() — use LinkedBlockingDeque if blocking is needed.
+|---▶ Suitable for non-blocking concurrent stack and queue implementations.
+|---▶ Use in high-performance concurrent systems (e.g., work-stealing, event queues).
+|---▶ Operations are linearizable (behave correctly under concurrency).
+|---▶ Iterators are weakly consistent — do not throw ConcurrentModificationException.
+|---▶ Avoid using if strict capacity limits or blocking features are required.

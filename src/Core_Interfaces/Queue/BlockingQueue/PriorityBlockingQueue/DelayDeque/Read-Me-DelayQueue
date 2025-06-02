@@ -1,0 +1,48 @@
+✅ Simple Explanation: What is DelayQueue?
+DelayQueue is an unbounded blocking queue of elements that implement the Delayed interface.
+An element can only be taken from the queue when its delay has expired.
+It is part of the java.util.concurrent package and is useful for delayed task scheduling, caching, time-based expiration, etc.
+
+Only elements with expired delays are accessible; others remain in the queue until their time is up.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ Thread-safe, unbounded, and based on a priority queue internally.
+|---▶ Only allows retrieval of elements after their delay has passed.
+|---▶ Implements blocking behavior using take() and poll() with delay-based logic.
+|---▶ Elements must implement the Delayed interface.
+|---▶ No null elements allowed.
+|---▶ Useful in scheduled task processing, timeouts, or delayed messaging systems.
+|---▶ Backed by a priority heap, ordered by delay expiration.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Java Code: DelayQueue_Demo.java
+java
+Copy
+Edit
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in DelayQueue_Demo.java
+
+Method	        Description
+put(E e)	--> Adds the element to the queue with delay logic. No blocking on insert.
+take()	    --> Retrieves and removes the head of the queue, waiting if necessary until the delay expires.
+isEmpty()	--> Returns true if the queue is empty.
+getDelay(TimeUnit unit)	--> Returns the remaining delay associated with the object (used by queue internally).
+compareTo(Delayed o)	--> Used to order elements based on their remaining delay.
+TimeUnit	--> Enum used to define and convert time units (e.g., SECONDS, MILLISECONDS).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points That Should Be Noted:
+|---▶ Elements must implement Delayed, which requires getDelay() and compareTo() methods.
+|---▶ Internally uses a priority queue, ordering tasks by delay expiration.
+|---▶ Retrieval is blocked until the delay time has passed — useful for scheduling tasks.
+|---▶ No element is available immediately after insertion unless its delay is zero or negative.
+|---▶ Can be used for timeouts, retry queues, rate-limiting, or cache expiration systems.
+|---▶ Unlike ScheduledExecutorService, DelayQueue doesn’t execute tasks — it only holds them until delay expiry.
+|---▶ Offers fine-grained control over task timing via the Delayed interface.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

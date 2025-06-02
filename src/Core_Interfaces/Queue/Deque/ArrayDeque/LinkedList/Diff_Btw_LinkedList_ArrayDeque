@@ -1,0 +1,64 @@
+✅ Simple Explanation
+Both LinkedList and ArrayDeque are Java classes that implement the Deque (double-ended queue) interface and
+support queue and stack operations.
+However, their internal data structures are different, and they have different performance characteristics.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ LinkedList vs ArrayDeque
+
+Feature	        LinkedList	                             ArrayDeque
+Backed by	    Doubly-linked list	                     Resizable array
+Implements	    List, Deque, Queue	                     Deque, Queue
+Allows null	    ✅ Yes	                                 ❌ No (throws NullPointerException)
+Random Access	❌ No	                                 ❌ No
+Thread-safe	    ❌ No	                                 ❌ No
+Performance	    Slower than ArrayDeque for queue/stack   Faster for queue/stack due to cache-friendly array
+                operations (more GC and node traversal)
+Memory overhead	Higher (each node has pointers)	         Lower (array-based, more compact)
+Ideal use	    Frequent insertions/removals in          Fast queue/stack operations at ends
+                the middle or both ends
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Code Comparison :-
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Using LinkedList as a Deque:
+
+Deque<String> linkedList = new LinkedList<>();
+linkedList.addFirst("A"); // acts like push
+linkedList.addLast("B");
+linkedList.removeFirst(); // acts like pop
+linkedList.removeLast();
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Using ArrayDeque as a Deque:
+
+Deque<String> arrayDeque = new ArrayDeque<>();
+arrayDeque.addFirst("A"); // acts like push
+arrayDeque.addLast("B");
+arrayDeque.removeFirst(); // acts like pop
+arrayDeque.removeLast();
+Both will behave similarly, but under the hood:
+
+|--> LinkedList manages nodes with links.
+|--> ArrayDeque manages a dynamic circular array.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ When to Use What?
+
+✅ Use ArrayDeque when:
+|--> You need a fast, memory-efficient stack or queue.
+|--> You don’t need to insert/remove in the middle.
+|--> You want better performance.
+
+✅ Use LinkedList when:
+|--> You need random insertions/removals at arbitrary positions.
+|--> You want to use List features (get(int index), set(), etc.)
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Important Notes :-
+|--> LinkedList supports List and Deque interfaces, while ArrayDeque only supports Deque.
+|--> ArrayDeque is generally preferred over LinkedList for implementing stacks and queues due to performance.
+|--> Avoid using both in multithreaded code unless externally synchronized.
+

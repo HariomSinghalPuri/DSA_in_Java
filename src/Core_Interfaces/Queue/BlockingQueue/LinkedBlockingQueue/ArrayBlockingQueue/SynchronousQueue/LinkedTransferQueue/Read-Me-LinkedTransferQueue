@@ -1,0 +1,37 @@
+✅ Simple Explanation: What is LinkedTransferQueue?
+LinkedTransferQueue is an unbounded, thread-safe, blocking queue based on linked nodes, which is part of the java.util.concurrent package.
+It supports normal queue operations, and also transfer operations, where a producer can wait for a consumer to receive the element directly.
+It combines features of a queue and a synchronous handoff mechanism, making it ideal for high-performance concurrent systems.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ Unbounded capacity — grows as needed.
+|---▶ Thread-safe — supports concurrent producers and consumers.
+|---▶ Supports blocking operations: take(), put(), etc.
+|---▶ Transfer operations allow a producer to wait until a consumer receives the element.
+|---▶ Fair ordering: Elements are processed in FIFO order (unless transfer-specific methods are used).
+|---▶ No null elements allowed — throws NullPointerException.
+|---▶ Highly efficient under high concurrency — uses non-blocking algorithms internally.
+|---▶ Useful for asynchronous messaging systems, real-time data pipelines, or thread coordination.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in LinkedTransferQueue_Demo.java
+Method	        Description
+transfer(E e)	--> Inserts the specified element and waits until it is received by a consumer. Blocks until taken.
+take()	        --> Retrieves and removes the head of the queue, waiting if necessary until an element becomes available.
+sleep(ms)	    --> Pauses the consumer thread to simulate the producer blocking during transfer.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points That Should Be Noted:
+|---▶ LinkedTransferQueue is a combination of a queue and a direct handoff channel.
+|---▶ transfer() blocks until a consumer takes the item — different from put(), which only blocks on capacity.
+|---▶ Can be used for message-passing systems where delivery to the consumer must be confirmed.
+|---▶ Supports other methods like tryTransfer(), hasWaitingConsumer(), and getWaitingConsumerCount() for advanced control.
+|---▶ Internally uses lock-free, CAS-based algorithms, making it highly scalable.
+|---▶ Excellent choice for work queues in custom executor implementations.
+|---▶ Use put() for normal addition, and transfer() for confirmed handoff.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

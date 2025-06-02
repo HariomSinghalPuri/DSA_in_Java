@@ -1,0 +1,35 @@
+✅ Simple Explanation: What is SynchronousQueue?
+SynchronousQueue is a specialized blocking queue in Java where each insert operation must wait for a corresponding
+remove operation by another thread, and vice versa.
+It does not store any elements internally — a put must wait for a take, and a take must wait for a put.
+It is part of the java.util.concurrent package and is ideal for handoff designs and thread coordination.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ No capacity/storage — does not hold elements internally.
+|---▶ Blocking behavior — both put() and take() block until a match is found.
+|---▶ Used for thread handoff — acts like a rendezvous point between producer and consumer threads.
+|---▶ Thread-safe — uses internal synchronization mechanisms.
+|---▶ No null elements allowed — throws NullPointerException.
+|---▶ Fair mode supported — FIFO ordering via constructor parameter.
+|---▶ Useful for direct communication between threads.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Explanation of Methods Used in SynchronousQueue_Demo.java
+Method	Description
+put(E e)	--> Inserts the specified element; blocks until another thread receives it using take().
+take()	    --> Retrieves and removes the element; blocks until another thread inserts it using put().
+sleep(ms)	--> Simulates delay in consumer to highlight how the producer is blocked waiting.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points That Should Be Noted:-
+|---▶ SynchronousQueue has no internal capacity, not even one slot — each operation must pair with another.
+|---▶ Use when you need a direct handoff between threads (e.g., real-time message passing).
+|---▶ Suitable for scenarios where no buffering is required.
+|---▶ Has a fairness mode (new SynchronousQueue<>(true)) for FIFO ordering of threads.
+|---▶ Not suitable for general-purpose producer-consumer models with buffering — use LinkedBlockingQueue or ArrayBlockingQueue instead.
+|---▶ Commonly used in thread pools, work handoff, and custom schedulers.

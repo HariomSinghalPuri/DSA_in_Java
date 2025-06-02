@@ -1,0 +1,43 @@
+✅ Simple Explanation: What is SortedSet?
+|--> SortedSet is an interface in the Java Collections Framework that extends the Set interface.
+|--> It automatically sorts elements in their natural order (like numbers ascending or strings alphabetically), or using a
+custom Comparator.
+|--> Unlike a regular Set, a SortedSet provides range view methods and sorted iteration.
+|--> The most common implementation is TreeSet.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features
+|---▶ Maintains elements in sorted (ascending) order.
+|---▶ No duplicates allowed.
+|---▶ Supports range views like subSet(), headSet(), and tailSet().
+|---▶ Uses natural ordering or a custom Comparator.
+|---▶ Null values are not allowed in SortedSet if it uses natural ordering.
+|---▶ Backed by TreeSet, which uses a Red-Black Tree internally.
+|---▶ Iteration is always in sorted order, not insertion order.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in SortedSet_Demo.java
+
+Method	                Description
+add(E e)	            |--> Adds the element in the correct sorted position.
+first()             	|--> Returns the smallest element in the set.
+last()	                |--> Returns the largest element in the set.
+headSet(E to)	        |--> Returns a view of elements less than the given element.
+tailSet(E from)	        |--> Returns a view of elements greater than or equal to the given element.
+subSet(E from, E to)	|--> Returns elements from (inclusive) to to (exclusive).
+remove(E e)	            |--> Removes the specified element from the set.
+toString()	            |--> Used to print the contents (in sorted order).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted :-
+
+|---▶ SortedSet is an interface — you usually use TreeSet as the concrete class.
+|---▶ Elements must be mutually comparable, else ClassCastException is thrown.
+|---▶ Natural ordering is used if no Comparator is provided.
+|---▶ Does not allow nulls if natural ordering is used (throws NullPointerException).
+|---▶ Ideal for tasks where ordering and uniqueness are required — e.g., leaderboards, range-based filtering.
+|---▶ Operations like headSet() and tailSet() return live views — changes affect original set.
+|---▶ Internally backed by a balanced binary search tree (TreeSet = Red-Black Tree).
+|---▶ Not thread-safe — use Collections.synchronizedSortedSet() for synchronization.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

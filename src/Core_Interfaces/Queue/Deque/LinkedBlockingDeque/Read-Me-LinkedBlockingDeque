@@ -1,0 +1,48 @@
+✅ Simple Explanation: What is LinkedBlockingDeque?
+LinkedBlockingDeque is a thread-safe, blocking, double-ended queue (Deque) implemented using a linked-node structure.
+It supports insertion, removal, and retrieval of elements from both ends and provides blocking capabilities, which means operations can wait for space or elements when necessary.
+It is part of the java.util.concurrent package and is well-suited for producer-consumer scenarios.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features
+
+|---▶ Thread-safe using internally managed locks (ReentrantLocks).
+|---▶ Blocking operations supported: put, take, offer, poll with timeout.
+|---▶ Double-ended: insert/remove from both head and tail.
+|---▶ Bounded: You can specify a maximum capacity, or it will use Integer.MAX_VALUE by default.
+|---▶ Does not allow null elements — throws NullPointerException.
+|---▶ Ideal for producer-consumer queues, work-stealing, or job scheduling.
+|---▶ Fair locking option is available (constructor with boolean fair).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Explanation of Methods Used in LinkedBlockingDeque_Demo.java
+Method	Description
+putFirst(E e)	--> Inserts the element at the front; waits if the deque is full.
+putLast(E e)	--> Inserts the element at the rear; blocks if the deque is full.
+offerFirst(E e)	--> Tries to insert at front; returns false if deque is full.
+offerLast(E e)	--> Tries to insert at rear; non-blocking version.
+peekFirst()	    --> Returns (but does not remove) the element at the front.
+peekLast()	    --> Returns (but does not remove) the element at the end.
+pollFirst()	    --> Retrieves and removes the front element; returns null if empty.
+pollLast()	    --> Retrieves and removes the rear element; returns null if empty.
+push(E e)	    --> Pushes an element (adds at front).
+pop()	        --> Removes and returns the top (front) element.
+put(E e)	    --> Inserts at the tail; blocks if full.
+take()	        --> Retrieves and removes head; blocks if empty.
+contains(Object o)	--> Returns true if deque contains the element.
+isEmpty()	     --> Checks if the deque is empty.
+size()	         --> Returns the number of elements in the deque.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points That Should Be Noted:-
+|---▶ LinkedBlockingDeque is blocking, unlike ConcurrentLinkedDeque.
+|---▶ Ideal for producer-consumer systems where threads wait for elements or space.
+|---▶ You can specify a capacity to prevent memory overflows.
+|---▶ Internally uses ReentrantLock and Condition for synchronization.
+|---▶ Supports fairness via constructor to reduce thread starvation.
+|---▶ More predictable behavior than lock-free queues under contention.
+|---▶ Not suitable for use cases requiring non-blocking performance — prefer ConcurrentLinkedDeque for that.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

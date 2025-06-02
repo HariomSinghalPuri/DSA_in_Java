@@ -1,0 +1,39 @@
+✅ ArrayBlockingQueue
+ArrayBlockingQueue is a bounded, blocking, FIFO queue backed by an array. It is part of java.util.concurrent and
+implements the BlockingQueue interface.
+It is used in multi-threaded environments where a fixed capacity queue with blocking support is needed
+(e.g., producer-consumer problems).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features :-
+
+|---> Bounded: Fixed capacity specified at construction time.
+|---> FIFO Order: First-in-first-out behavior.
+|---> Thread-safe: Supports concurrent access.
+|---> Blocking support: Threads wait when inserting into a full queue or retrieving from an empty queue.
+|---> Backed by a circular array.
+|---> Optionally fair: Fairness policy ensures FIFO access for threads.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in ArrayBlockingQueue_Demo.java
+
+Method	                                            Description
+ArrayBlockingQueue<>(int capacity, boolean fair)	|---> Creates a bounded queue with specified capacity and optional fairness.
+put(E e)	                                        |---> Inserts the element, waits if the queue is full.
+offer(E e, long timeout, TimeUnit unit)         	|---> Tries to insert the element, waits up to the timeout if full. Returns false if it times out.
+peek()	                                            |---> Retrieves (but does not remove) the head of the queue; returns null if empty.
+take()	                                            |---> Retrieves and removes the head, waits if queue is empty.
+poll(long timeout, TimeUnit unit)	                |---> Retrieves and removes the head, waits up to timeout if empty. Returns null if time expires.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points to Note :-
+
+|---> ArrayBlockingQueue must be initialized with a capacity.
+|---> Fairness policy: When true, waiting threads are served in FIFO order. This may reduce throughput but is useful when fairness is required.
+|---> Does not allow null values – throws NullPointerException.
+|---> Backed by a circular array.
+|---> Prefer offer()/poll() for non-blocking or time-limited operations; use put()/take() for indefinite blocking.
+|---> Ideal for implementing producer-consumer problems in concurrent programming.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

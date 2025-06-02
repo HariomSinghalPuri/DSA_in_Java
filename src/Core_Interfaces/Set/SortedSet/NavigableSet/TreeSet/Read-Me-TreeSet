@@ -1,0 +1,45 @@
+✅ Simple Explanation: What is TreeSet?
+|--> TreeSet is a concrete implementation of the NavigableSet interface backed by a Red-Black Tree.
+|--> It stores unique elements in sorted order and provides logarithmic time complexity for basic operations like add(),
+remove(), and contains().
+|--> Because it implements NavigableSet, it supports navigation, subset, and range-based operations.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features :-
+
+|---▶ Implements NavigableSet and indirectly SortedSet and Set.
+|---▶ Maintains natural ordering or uses a custom comparator.
+|---▶ Stores unique elements only (no duplicates).
+|---▶ Backed by a self-balancing Red-Black Tree.
+|---▶ Provides log(n) time complexity for add, remove, search.
+|---▶ Thread-unsafe — use external synchronization if needed.
+|---▶ Does not allow null elements if using natural ordering.
+|---▶ Supports rich range queries, descending views, and closest-match lookups.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in TreeSet_Demo.java :-
+
+Method	Description
+add(E e)	       |--> Inserts element into the set in sorted order.
+lower(E e)	       |--> Returns greatest element strictly less than the given one.
+floor(E e)	       |--> Returns greatest element less than or equal to the given one.
+ceiling(E e)	   |--> Returns least element greater than or equal to the given one.
+higher(E e)	       |--> Returns least element strictly greater than the given one.
+descendingSet()	   |--> Returns elements in reverse sorted order.
+headSet(E toElement, boolean inclusive)	    |--> Elements less than (or equal to) toElement.
+tailSet(E fromElement, boolean inclusive)	|--> Elements greater than (or equal to) fromElement.
+subSet(E from, boolean fromInclusive, E to, boolean toInclusive)	|--> Range between two elements, with control over boundaries.
+pollFirst()	       |--> Removes and returns the lowest element.
+pollLast()	       |--> Removes and returns the highest element.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted :-
+
+|---▶ TreeSet automatically sorts elements in natural or custom order.
+|---▶ It is a NavigableSet, so it supports range queries and closest match lookups.
+|---▶ Backed by a Red-Black Tree, ensuring balance and O(log n) operations.
+|---▶ No duplicates allowed; insertion of duplicates is ignored.
+|---▶ Iterators are fail-fast, but not thread-safe — consider Collections.synchronizedSet() for concurrency.
+|---▶ Incompatible with null values if natural ordering is used.
+|---▶ Ideal for sorted unique storage, like leaderboards, name lists, etc.
+|---▶ Any mutation in subset views (like headSet()) also affects the original set.

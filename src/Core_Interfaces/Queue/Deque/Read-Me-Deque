@@ -1,0 +1,49 @@
+✅ Simple Explanation
+Deque (short for Double Ended Queue) is a linear collection that allows insertion and removal of elements from both
+ends — front (head) and rear (tail).
+It is a subinterface of Queue introduced in Java 6 and is part of the java.util package.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features :-
+
+|---> Insertion/removal from both ends.
+|---> Implements Queue, hence supports queue-related operations.
+|---> Can function as stack (LIFO) or queue (FIFO).
+|---> Null elements not allowed.
+|---> Provides both exception-throwing and graceful (returns null/false) methods.
+|---> Implementations include:
+|---------> ArrayDeque (most common)
+|---------> LinkedList (doubly-linked)
+|---------> ConcurrentLinkedDeque (thread-safe)
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in Deque_Demo.java
+
+Method	        Description
+addFirst(E e)	|---> Inserts element at the front. Throws exception if capacity is exceeded.
+addLast(E e)	|---> Inserts element at the rear. Throws exception if capacity is exceeded.
+offerFirst(E e)	|---> Inserts element at the front; returns false if full.
+offerLast(E e)	|---> Inserts element at the rear; returns false if full.
+peekFirst()  	|---> Retrieves (without removing) the front element; returns null if empty.
+peekLast()	    |---> Retrieves (without removing) the rear element; returns null if empty.
+pollFirst()	    |---> Retrieves and removes the front element; returns null if empty.
+pollLast()	    |---> Retrieves and removes the rear element; returns null if empty.
+push(E e)	    |---> Pushes an element to the front (stack behavior).
+pop()	        |---> Pops (removes and returns) the front element (stack behavior).
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points to Note :-
+
+|---> Deque is an interface; common implementation is ArrayDeque.
+|---> ArrayDeque is faster than Stack and LinkedList when used as a stack.
+|---> No capacity limit in ArrayDeque unless specified.
+|---> Thread-safe versions:
+|-----------> ConcurrentLinkedDeque (non-blocking)
+|-----------> LinkedBlockingDeque (blocking)
+
+Avoid using null elements — all methods will throw NullPointerException if you try.
+Can be used to implement both queues (FIFO) and stacks (LIFO) efficiently.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

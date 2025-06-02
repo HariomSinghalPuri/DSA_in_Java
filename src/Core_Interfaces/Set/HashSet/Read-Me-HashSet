@@ -1,0 +1,42 @@
+✅ Simple Explanation: What is HashSet?
+HashSet is a class in the Java Collections Framework that implements the Set interface using a HashMap internally.
+It represents a collection of unique elements, meaning duplicates are not allowed.
+The elements are stored in no particular order and the class offers constant-time performance for basic operations like
+add, remove, contains, and size, assuming the hash function disperses elements properly.
+It's ideal when you want to store unique elements without maintaining order.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features
+|---▶ Implements the Set interface and backed by a HashMap.
+|---▶ Stores only unique elements (no duplicates allowed).
+|---▶ Unordered — does not guarantee insertion or sorted order.
+|---▶ Allows null as a single element (only one null allowed).
+|---▶ Non-synchronized — use Collections.synchronizedSet() for thread safety.
+|---▶ Offers constant-time performance (O(1)) for basic operations.
+|---▶ Suitable for fast membership tests (e.g., checking if an element exists).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in HashSet_Demo.java
+
+Method	             Description
+add(E e)	        |--> Adds the specified element to the set if it is not already present. Returns true if added.
+contains(Object o)	|--> Returns true if the set contains the specified element.
+remove(Object o)	|--> Removes the specified element from the set if it is present.
+size()	            |--> Returns the number of elements in the set.
+isEmpty()	        |--> Returns true if the set contains no elements.
+clear()	            |--> Removes all elements from the set.
+for-each loop	    |--> Used to iterate through all elements in the set.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted :-
+
+|---▶ HashSet does not maintain insertion order — elements may appear in any order.
+|---▶ Allows one null element.
+|---▶ Duplicate elements are automatically ignored.
+|---▶ Internally backed by a HashMap where values are dummy objects.
+|---▶ Performance depends on hash function quality — poor hash function = collisions = slower operations.
+|---▶ Not synchronized — use Collections.synchronizedSet(new HashSet<>()) for thread-safe usage.
+|---▶ Ideal for quick lookups and uniqueness checks.
+|---▶ Java 8+ improves performance by converting hash buckets to trees after a certain threshold (like TreeNode).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

@@ -1,0 +1,328 @@
+
+DSA\
+   |---src\
+          |---DSA_Level_1.C_Arrays\
+              |    |---Questions\
+              |    |            |---Q1_Taking_user_Input.java
+              |    |            |--- .....
+              |    |
+              |    |---ArrayListExample.java
+              |    |---ColNoFixed.java
+              |    |--- .....
+              |
+              |---Core_Interfaces\
+              |                  |
+              |                  |---List\
+              |                  |        |---ArrayList\
+              |                  |        |            |---ArrayList_Demo.java
+              |                  |        |
+              |                  |        |---LinkedList\
+              |                  |        |             |---IterationLinkedList.java
+              |                  |        |             |---LinkedList_Demo.java
+              |                  |        |             |---LinkedListAsQueue.java
+              |                  |        |             |---LinkedListAsStack.java
+              |                  |        |
+              |                  |        |---Vector\
+              |                  |        |         |---Vector_Demo.java
+              |                  |        |
+              |                  |        |---List_Demo.java
+              |                  |        |---Read-Me-List.tct
+              |                  |
+              |                  |---Map\
+              |                  |      |
+              |                  |      |---ConcurrentMap\
+              |                  |      |                |
+              |                  |      |                |---ConcurrentHashMap\
+              |                  |      |                                    |
+              |                  |      |                                    |---ConcurrentMap_Demo.java
+              |                  |      |                                    |---Read-Me-ConcurrentMap.txt
+              |                  |      |                                    |---ConcurrentHashMap\
+              |                  |      |                                                         |
+              |                  |      |                                                         |---ConcurrentHashMap_Demo.java
+              |                  |      |                                                         |---Read-Me-ConcurrentHashMap.txt
+              |                  |      |                                                         |---ConcurrentSkipListMap\
+              |                  |      |                                                                                  |
+              |                  |      |                                                                                  |---ConcurrentSkipListMap_Demo.java
+              |                  |      |                                                                                  |---Read-Me-ConcurrentSkipListMap.txt
+              |                  |      |
+              |                  |      |---EnumMap\
+              |                  |      |          |
+              |                  |      |          |---EnumMap_Demo.java
+              |                  |      |          |---Read-Me-EnumMap.txt
+              |                  |      |
+              |                  |      |---HashMap\
+              |                  |      |           |
+              |                  |      |           |---LinkedHashMap\
+              |                  |      |           |                |---LinkedHashMapDemo.java
+              |                  |      |           |                |---Read-Me-LinkedHashMap.txt
+              |                  |      |           |
+              |                  |      |           |---WeakHashMap\
+              |                  |      |           |              |---Read-Me-WeakHashMap.txt
+              |                  |      |           |              |---WeakHashMap_Demo.java
+              |                  |      |           |              |---WeakRefGCExample.java
+              |                  |      |           |
+              |                  |      |           |---IdentityHashMap\
+              |                  |      |           |                  |---IdentityHashMap_Demo.java
+              |                  |      |           |                  |---Read-Me-IdentityHashMap.txt
+              |                  |      |           |
+              |                  |      |           |---ThreadSafeHashMap.java
+              |                  |      |           |---ThreadSafeHashMap.java
+              |                  |      |           |---HashMapBasicOperation.java
+              |                  |      |           |---HashMapComputeMethods.java
+              |                  |      |           |---HashMapCreation.java
+              |                  |      |           |---HashMapIteration.java
+              |                  |      |           |---HashMapMerge.java
+              |                  |      |           |---HashMapNullHandling.java
+              |                  |      |           |---Read-Me-HashMap.txt
+              |                  |      |           |---ThreadSafeHashMap.java
+              |                  |      |
+              |                  |      |---SortedMap\
+              |                  |      |             |
+              |                  |      |             |---TreeMap\
+              |                  |      |                        |
+              |                  |      |                        |---NavigableMap\
+              |                  |      |                        |               |
+              |                  |      |                        |               |---NavigableMap_Demo.java
+              |                  |      |                        |               |---Read-Me-NavigableMap.txt
+              |                  |      |                        |
+              |                  |      |                        |---Read-Me_TreeMap.txt
+              |                  |      |                        |---TreeMap_Demo.java
+              |                  |      |
+              |                  |      |---Map_Demo.java
+              |                  |      |---Read-Me-Map.txt
+              |                  |
+              |                  |
+              |                  |---Queue\
+              |                  |        |
+              |                  |        |---BlockingQueue\
+              |                  |        |                |
+              |                  |        |                |---LinkedBlockingQueue\
+              |                  |        |                |                      |
+              |                  |        |                |                      |---ArrayBlockingQueue\
+              |                  |        |                |                      |                     |
+              |                  |        |                |                      |                     |---SynchronousQueue\
+              |                  |        |                |                      |                     |                   |
+              |                  |        |                |                      |                     |                   |---LinkedTransferQueue\
+              |                  |        |                |                      |                     |                   |                      |
+              |                  |        |                |                      |                     |                   |                      |---LinkedTransferQueue_Demo.java
+              |                  |        |                |                      |                     |                   |                      |---Read-Me-LinkedTransferQueue.txt
+              |                  |        |                |                      |                     |                   |
+              |                  |        |                |                      |                     |                   |---Read-Me-SynchronousQueue.txt
+              |                  |        |                |                      |                     |                   |---SynchronousQueue_Demo.java
+              |                  |        |                |                      |                     |
+              |                  |        |                |                      |                     |---ArrayBlockingQueue_Demo.java
+              |                  |        |                |                      |                     |---Read-Me-ArrayBlockingQueue.txt
+              |                  |        |                |                      |
+              |                  |        |                |                      |---LinkedBlockingQueue_Demo.java
+              |                  |        |                |                      |---Read-Me-LinkedBlockingQueue.txt
+              |                  |        |                |
+              |                  |        |                |---PriorityBlockingQueue\
+              |                  |        |                |---BlockingQueue_Demo.java
+              |                  |        |                |---Read-Me-BlockingQueue
+              |                  |        |
+              |                  |        |---Deque\
+              |                  |        |        |
+              |                  |        |        |---ArrayDeque\
+              |                  |        |        |             |
+              |                  |        |        |             |---LinkedList\
+              |                  |        |        |             |             |---Diff_Btw_LinkedList_ArrayDeque.txt
+              |                  |        |        |             |
+              |                  |        |        |             |---ArrayDeque_Demo.java
+              |                  |        |        |             |---Read-Me-ArrayDeque.txt
+              |                  |        |        |
+              |                  |        |        |---ConcurrentLinkedDeque\
+              |                  |        |        |                        |
+              |                  |        |        |                        |---ConcurrentLinkedDeque_Demo.java
+              |                  |        |        |                        |---Read-Me-ConcurrentLinkedDeque.txt
+              |                  |        |        |
+              |                  |        |        |---LinkedBlockingDeque\
+              |                  |        |        |                      |
+              |                  |        |        |                      |---LinkedBlockingDeque_Demo.java
+              |                  |        |        |                      |---Read-Me-LinkedBlockingDeque.txt
+              |                  |        |        |
+              |                  |        |        |---Deque_Demo.java
+              |                  |        |        |---Read-Me-Deque.txt
+              |                  |        |
+              |                  |        |---PriorityQueue\
+              |                  |        |                |
+              |                  |        |                |---PriorityQueue_Demo.java
+              |                  |        |                |---Read-Me-PriorityQueue.txt
+              |                  |        |
+              |                  |        |---Queue_Demo.java
+              |                  |        |---Read-Me-Queue.txt
+              |                  |
+              |                  |---Set\
+              |                         |
+              |                         |---CopyOnWriteArraySet\
+              |                         |                      |
+              |                         |                      |---CopyOnWriteArraySet_Demo.java
+              |                         |                      |---Read-Me-CopyOnWriteArraySet.txt
+              |                         |
+              |                         |---EnumSet\
+              |                         |          |
+              |                         |          |---EnumSet_Demo.java
+              |                         |          |---Read-Me-EnumSet
+              |                         |
+              |                         |---HashSet\
+              |                         |          |
+              |                         |          |---LinkedHashSet\
+              |                         |          |                |
+              |                         |          |                |---LinkedHashSet_Demo.java
+              |                         |          |                |---Read-Me-LinkedHashSet.txt
+              |                         |          |
+              |                         |          |---HashSet_Demo.java
+              |                         |          |---Read-Me-HashSet.txt
+              |                         |
+              |                         |---SortedSet\
+              |                         |            |
+              |                         |            |---NavigableSet\
+              |                         |            |               |
+              |                         |            |               |---TreeSet\
+              |                         |            |               |          |
+              |                         |            |               |          |---Read-Me-TreeSet.txt
+              |                         |            |               |          |---TreeSet_Demo.java
+              |                         |            |               |
+              |                         |            |               |---NavigableSet_Demo.java
+              |                         |            |               |---Read-Me-NavigableSet.txt
+              |                         |            |
+              |                         |            |---Read-Me-SortedSet.txt
+              |                         |            |---SortedSet_Demo.java
+              |                         |
+              |                         |---Read-Me-Set.txt
+              |                         |---Set_Demo.java
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |

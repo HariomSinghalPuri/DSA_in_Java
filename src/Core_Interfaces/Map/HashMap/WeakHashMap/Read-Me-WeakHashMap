@@ -1,0 +1,81 @@
+📘 What is WeakHashMap in Java?
+WeakHashMap is a Java Map implementation where keys are held using weak references, meaning they do not prevent garbage
+collection. When a key is no longer referenced elsewhere, it can be automatically removed by the garbage collector.
+
+🔑 Key Points about WeakHashMap
+--> 1. Weak References for Keys
+--->>> Keys are stored using java.lang.ref.WeakReference.
+--->>> If a key is no longer strongly referenced outside the map, it becomes eligible for garbage collection.
+
+--> 2. Automatic Removal of Entries
+--->>> When a key is garbage collected, its entry is automatically removed from the map.
+
+--> 3. Implements Map<K, V>
+--->>> Functions like any other map (put, get, remove, etc.).
+--->>> Behaves like HashMap, but with weak keys.
+
+--> 4. Allows Null Keys and Values
+--->>> Like HashMap, allows one null key and multiple null values.
+
+--> 5. Not Thread-Safe
+--->>> Must be synchronized externally for use in multi-threaded environments.
+
+--> 6. Use Cases
+--->>> Caching: Ideal for memory-sensitive caches.
+--->>> Avoiding memory leaks by letting keys get collected when no longer in use.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+📂 Key Methods of WeakHashMap
+
+1. put(K key, V value)	        |--> Associates the given key with the given value.
+2. get(Object key)              |--> Retrieves the value for the specified key.
+3. remove(Object key)           |--> Removes the entry for the specified key.
+4. containsKey(Object key)      |--> Checks if the map contains the specified key.
+5. containsValue(Object value)	|--> Checks if the map contains the specified value.
+6. size()	                    |--> Returns the number of entries (only live keys).
+7. isEmpty()                    |--> Checks if the map is empty.
+8. clear()	                    |--> Removes all entries.
+9. keySet()                     |--> Returns a Set of keys.
+10. values()	                |--> Returns a collection of values.
+11. entrySet()	                |--> Returns a set of key-value pairs.
+12. putAll(Map<? extends K, ? extends V> m)	|--> Copies entries from another map.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+WeakHashMap.java --->
+
+🧠 Short Notes on Each Method -->
+
+|--> put()	Adds or replaces a key-value pair using a weak key.
+|--> get()	Fetches value if the key is still reachable.
+|--> remove()	Removes entry for the specified key.
+|--> containsKey()	Checks for presence using weak references.
+|--> containsValue()	Checks if any value matches (uses equals()).
+|--> size()	Counts only entries with live keys.
+|--> isEmpty()	True if no entries are present.
+|--> clear()	Deletes all entries.
+|--> keySet()	Returns live keys.
+|--> values()	Returns live values.
+|--> entrySet()	Returns live key-value pairs.
+|--> putAll()	Copies all entries from another map.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+WeakRefGCExample.java
+
+In the WeakRefGCExample demo, we show how a WeakHashMap automatically removes an entry when its key is no longer strongly referenced:
+
+✅ Key Steps:
+|-->A new key object (new String("TempKey")) is created and added to the WeakHashMap.
+|-->The strong reference to the key is removed by setting key = null.
+|-->System.gc() is called to suggest garbage collection.
+|-->After a short delay, the key is garbage collected.
+|-->As a result, the map automatically removes the corresponding entry.
+
+📌 Why This Happens:
+|-->WeakHashMap stores keys using weak references.
+|-->When no strong reference to the key exists, the garbage collector reclaims the key, and the entry disappears from the map.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

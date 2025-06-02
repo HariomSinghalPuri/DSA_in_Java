@@ -1,0 +1,44 @@
+✅ Simple Explanation: What is LinkedBlockingQueue?
+LinkedBlockingQueue is a thread-safe, blocking queue implementation using linked nodes.
+It is part of the java.util.concurrent package and supports FIFO (First-In-First-Out) order.
+This queue is ideal for producer-consumer scenarios because it can block the producer when the queue is full, or block
+the consumer when it’s empty.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ Thread-safe using internal locks and condition variables.
+|---▶ Blocking operations: put(), take() can wait for space or elements.
+|---▶ FIFO order: Maintains the order in which elements are inserted.
+|---▶ Bounded or unbounded: You can set a capacity or use the default Integer.MAX_VALUE.
+|---▶ No null elements allowed — throws NullPointerException.
+|---▶ Fairness option not supported (unlike some blocking deques).
+|---▶ Efficient for producer-consumer design patterns.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in LinkedBlockingQueue_Demo.java
+
+Method	Description
+put(E e)	--> Inserts element, waits if the queue is full (blocking).
+offer(E e)	--> Inserts element if possible; returns false if full (non-blocking).
+peek()	    --> Returns (but does not remove) the head element, or null if empty.
+poll()	    --> Retrieves and removes the head element, or null if empty.
+take()	    --> Retrieves and removes the head element, waiting if necessary (blocking).
+contains(Object o)	--> Returns true if the element exists in the queue.
+isEmpty()	--> Checks if the queue is empty.
+size()	    --> Returns the number of elements in the queue (snapshot, may not be exact in concurrent use).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted:-
+
+|---▶ LinkedBlockingQueue is FIFO based — elements are ordered by insertion.
+|---▶ Blocking behavior makes it ideal for multi-threaded producer-consumer patterns.
+|---▶ Default capacity is Integer.MAX_VALUE, but you should provide a custom limit to avoid memory issues.
+|---▶ Use put() and take() for blocking insertion/removal.
+|---▶ Internally uses separate locks for put and take to increase throughput.
+|---▶ Does not support null elements — they throw NullPointerException.
+|---▶ Not suitable when you need deque operations — use LinkedBlockingDeque instead.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+

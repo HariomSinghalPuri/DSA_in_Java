@@ -1,0 +1,41 @@
+✅ ArrayDeque
+ArrayDeque is a resizable array implementation of the Deque interface.
+It allows insertion and removal of elements at both ends and is faster than Stack and LinkedList for stack and queue
+operations.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features
+
+|---> Implements Deque (double-ended queue).
+|---> Allows insertion/removal at both ends: FIFO (queue) and LIFO (stack).
+|---> No capacity limit (dynamically resizes).
+|---> Faster than Stack and LinkedList.
+|---> Not thread-safe (use external synchronization if needed).
+|---> Does not allow null elements.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in ArrayDeque_Demo.java
+
+Method	        Description
+add(E e)	    |---> Adds element at the end (like addLast)
+addFirst(E e)	|---> Adds element to the front
+addLast(E e)	|---> Adds element to the end
+peekFirst()	    |---> Returns front element without removing it
+peekLast()	    |---> Returns rear element without removing it
+pollFirst()     |---> Removes and returns front element; returns null if empty
+pollLast()	    |---> Removes and returns rear element; returns null if empty
+push(E e)	    |---> Pushes element onto the stack (adds at front)
+pop()	        |---> Pops (removes and returns) the top of the stack (front)
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points to Note :-
+
+|---> ArrayDeque is not thread-safe — use Collections.synchronizedDeque() for synchronization.
+|---> Cannot store null values — NullPointerException will be thrown.
+|---> Can be used as both:
+|-------------------------> Queue (FIFO) → addLast, pollFirst
+|-------------------------> Stack (LIFO) → push, pop
+|---> No capacity restriction — grows as needed.
+|---> Faster than Stack and LinkedList for stack/queue operations due to contiguous memory.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

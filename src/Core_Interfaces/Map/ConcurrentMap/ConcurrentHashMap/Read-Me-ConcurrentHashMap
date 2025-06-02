@@ -1,0 +1,44 @@
+🧠 What is ConcurrentHashMap?
+ConcurrentHashMap is a thread-safe, high-performance implementation of ConcurrentMap. It allows concurrent read and
+write access by multiple threads without locking the entire map.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+🧩 Key Features of ConcurrentHashMap
+
+< Features >	            < Description >
+Thread-safe	                |--> Allows safe concurrent access without synchronized blocks.
+Segmented Locking (Java 7)	|--> Only parts of the map are locked.
+Lock-free Reads (Java 8+)	|--> Uses advanced non-blocking techniques for reads.
+Nulls Not Allowed	        |--> Neither keys nor values can be null.
+Atomic Operations	        |--> Includes putIfAbsent, replace, compute, etc.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+ConcurrentHashMap_Demo.java
+
+🧠 Short Notes on Each Method
+< Method >	                    < Description >
+put(K, V)	                    |--> Inserts or replaces key-value mapping.
+get(Object key)	                |--> Retrieves the value by key.
+putIfAbsent(K, V)	            |--> Inserts only if key is not already mapped.
+remove(Object key)	            |--> Removes mapping for key.
+remove(K, V)	                |--> Removes mapping only if key is mapped to the given value.
+replace(K, V)	                |--> Replaces value for key.
+replace(K, oldV, newV)	        |--> Replaces only if current value matches.
+computeIfAbsent(K, Function)	|--> Computes and inserts a value if key is absent.
+computeIfPresent(K, BiFunction)	|--> Computes and updates value if key is present.
+containsKey(Object key)	        |--> Checks for key.
+containsValue(Object value)	    |--> Checks for value.
+entrySet()	                    |--> Returns key-value entries.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+🧪 When to Use ConcurrentHashMap
+
+✅ Use ConcurrentHashMap when:
+|--> You need thread-safe operations with high performance.
+|--> You're working in multi-threaded environments like web servers or concurrent caching systems.
+|--> You need atomic methods (putIfAbsent, computeIfPresent, etc.).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+

@@ -1,0 +1,44 @@
+✅ BlockingQueue
+A BlockingQueue is a thread-safe queue introduced in java.util.concurrent that supports blocking operations for
+inserting and retrieving elements.
+It is mainly used in producer-consumer scenarios where:
+|---> The producer thread waits (blocks) if the queue is full.
+|---> The consumer thread waits (blocks) if the queue is empty.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features :-
+
+|---> Belongs to the java.util.concurrent package.
+|---> Extends the Queue interface.
+|---> All methods are thread-safe.
+|---> Offers blocking versions of put() and take().
+|---> Can be bounded (fixed size) or unbounded.
+|---> Useful for multithreaded programming (especially producer-consumer patterns).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in BlockingQueue_Demo.java
+
+Method	                                 Description
+put(E e)	                             |---> Adds element, waits if queue is full.
+offer(E e, long timeout, TimeUnit unit)	 |---> Attempts to add element, waits up to timeout if full, returns false if timeout expires.
+peek()	                                 |---> Retrieves, but does not remove, head of queue; returns null if empty.
+take()	                                 |---> Retrieves and removes head of queue; waits if queue is empty.
+poll(long timeout, TimeUnit unit)	     |---> Retrieves and removes head, waits up to timeout if empty; returns null if timeout expires.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points to Note :-
+
+|---> BlockingQueue is an interface, you must use one of its implementations:
+|------> ArrayBlockingQueue – bounded and FIFO.
+|------> LinkedBlockingQueue – optionally bounded, FIFO.
+|------> PriorityBlockingQueue – unbounded, sorted order.
+|------> SynchronousQueue – no internal capacity (direct handoff).
+|------> DelayQueue, LinkedTransferQueue – specialized behavior.
+
+|---> Use put() and take() for blocking behavior instead of add() and remove().
+|---> BlockingQueue does not allow null elements.
+|---> Often used with thread pools or producer-consumer design pattern.
+|---> void mixing put() with offer() and take() with poll() in multi-threaded environments unless you control the timeout logic.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

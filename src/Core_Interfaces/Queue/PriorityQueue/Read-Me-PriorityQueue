@@ -1,0 +1,40 @@
+✅ Simple Explanation: What is PriorityQueue?
+PriorityQueue is a part of the Java Collections Framework and is an unbounded, non-thread-safe queue that orders
+elements according to their natural ordering or a custom Comparator.
+The element with the highest priority (lowest value) is always at the head of the queue.
+It is based on a heap data structure and is mainly used when priority-based access is needed.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ Automatically orders elements by priority (min-heap by default).
+|---▶ Not thread-safe — use external synchronization in multi-threaded environments.
+|---▶ Unbounded — grows as needed (backed by an array).
+|---▶ No null elements allowed — throws NullPointerException.
+|---▶ Non-FIFO — orders by priority, not insertion order.
+|---▶ Supports natural ordering (Comparable) or custom ordering (Comparator).
+|---▶ Useful in job scheduling, Dijkstra’s algorithm, task prioritization, etc.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in PriorityQueue_Demo.java
+
+Method	    Description
+add(E e)	--> Inserts the specified element into the queue; throws exception if unable.
+offer(E e)	--> Inserts element without exception; returns false if unable (rare in unbounded queues).
+peek()	    --> Retrieves but does not remove the head (highest priority element); returns null if empty.
+poll()	    --> Retrieves and removes the head of the queue; returns null if the queue is empty.
+size()	    --> Returns the number of elements in the queue.
+isEmpty()	--> Returns true if the queue contains no elements.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted:
+
+|---▶ PriorityQueue does not guarantee consistent iteration order — only removal via poll() is ordered.
+|---▶ Use Collections.synchronizedQueue() or PriorityBlockingQueue for thread-safe usage.
+|---▶ The default priority is based on natural ordering (e.g., smallest number = highest priority).
+|---▶ Can be used with a custom comparator for different ordering strategies.
+|---▶ Internal structure is a binary heap, providing O(log n) insertion and removal.
+|---▶ Does not allow null values — throws NullPointerException if attempted.
+|---▶ Ideal for greedy algorithms, shortest path, job queues, CPU scheduling, etc.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

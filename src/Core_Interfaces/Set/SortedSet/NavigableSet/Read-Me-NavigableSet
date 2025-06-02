@@ -1,0 +1,45 @@
+✅ Simple Explanation: What is NavigableSet?
+|--> NavigableSet is a subinterface of SortedSet that provides additional navigation methods to retrieve elements based on
+closest matches (like floor, ceiling, higher, lower).
+|--> It maintains elements in a sorted order, and allows bidirectional navigation and view subsets with more control.
+|--> The most common implementation is TreeSet.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Features :-
+
+|---▶ Extends SortedSet with navigation capabilities (floor, ceiling, etc.).
+|---▶ Maintains sorted order (natural or comparator-based).
+|---▶ Supports inclusive/exclusive subset views.
+|---▶ Provides descending order views and iterators.
+|---▶ No duplicates and null values not allowed with natural ordering.
+|---▶ Internally backed by a Red-Black Tree (TreeSet).
+|---▶ Ideal for range-based queries and nearest-element lookups.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in NavigableSet_Demo.java :-
+
+Method	        Description
+add(E e)        |--> Adds the element in sorted order.
+lower(E e)	    |--> Returns the greatest element less than the given element.
+floor(E e)	    |--> Returns the greatest element less than or equal to the given element.
+ceiling(E e)	|--> Returns the least element greater than or equal to the given element.
+higher(E e)	    |--> Returns the least element greater than the given element.
+descendingSet()	|--> Returns a reverse view of the set.
+headSet(E to, boolean inclusive)	|--> Returns elements less than (or equal if inclusive) to the given element.
+tailSet(E from, boolean inclusive)	|--> Returns elements greater than (or equal if inclusive) to the given element.
+subSet(E from, boolean fromInclusive, E to, boolean toInclusive)	|--> Returns a range of elements with control over bounds inclusion.
+pollFirst()   	|--> Removes and returns the lowest element.
+pollLast()	    |--> Removes and returns the highest element.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Some Important Points That Should Be Noted :-
+
+|---▶ NavigableSet adds rich navigation to SortedSet.
+|---▶ Implemented by TreeSet, which uses a Red-Black Tree.
+|---▶ Provides methods to find closest matches — helpful in scheduling, auto-suggestions, etc.
+|---▶ Subsets are live views — modifying them affects the original set.
+|---▶ Iterators are fail-fast, but not thread-safe — use Collections.synchronizedNavigableSet() if needed.
+|---▶ Perfect for use cases involving range-based operations or nearby element search.
+|---▶ Avoid inserting null — causes NullPointerException if natural ordering is used.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

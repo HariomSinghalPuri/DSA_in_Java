@@ -1,0 +1,130 @@
+
+(1)-----> ArrayList
+ArrayList is one of the most commonly used implementations of the List interface in Java. It's a resizable array
+that provides dynamic storage for elements. Here's everything you need to know about ArrayList:
+
+(A)Basic Characteristics
+-->Dynamic sizing: Unlike regular arrays, ArrayLists can grow or shrink as needed
+-->Implements List interface: Part of Java's Collections Framework
+-->Index-based access: Allows fast random access (O(1) time complexity)
+-->Ordered collection: Maintains insertion order
+-->Allows duplicates: Can store multiple identical elements
+-->Allows null values: Can contain null elements
+-->Not synchronized: Not thread-safe by default
+
+(B)Key Advantages over DSA_Level_1.C_Arrays
+-->Automatic resizing (no need to specify capacity upfront)
+-->Rich API with many useful methods
+-->Better integration with Java Collections Framework
+
+Important Methods
+-->indexOf(Object o): Returns first index of element or -1 if not found
+-->lastIndexOf(Object o): Returns last index of element
+-->subList(int from, int to): Returns view of portion of list
+-->toArray(): Converts to Object array
+-->toArray(T[] a): Converts to typed array
+-->trimToSize(): Trims capacity to current size
+-->ensureCapacity(int min): Increases capacity if needed
+
+Performance Characteristics
+(1)-->Access: O(1) - Constant time for get/set operations
+
+(2)-->Insertion:
+
+----->End: O(1) amortized (may trigger resize)
+----->Middle: O(n) - Requires shifting elements.
+
+(3)-->Deletion:
+----->End: O(1)
+----->Middle: O(n) - Requires shifting elements
+
+(4)-->Search: O(n) for unsorted list (linear search)
+
+
+Capacity Management
+ArrayList grows automatically when it reaches capacity, but this involves:
+-->Allocating a new larger array
+-->Copying all elements
+-->Discarding the old array
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+(2)-----> Vectors
+
+A Vector in Java is a dynamic, growable array that implements the List interface.
+It is part of the Java Collections Framework and is similar to ArrayList, but with two key differences:
+
+-->(A)Synchronized (Thread-Safe) - All methods are synchronized, making it safe for multithreaded environments.
+-->(B)Legacy Class - Exists since Java 1.0, while ArrayList was introduced in Java 1.2.
+
+-->Key Features of Vector
+----->Dynamic resizing: Automatically grows when elements are added.
+----->Index-based access: Fast random access (O(1) time complexity).
+----->Synchronized: Thread-safe (but slower than ArrayList).
+----->Allows duplicates and null values.
+----->Maintains insertion order.
+
+<<----->>How To call Vector in java<<----->>
+
+ 1. Default constructor - initial capacity 10
+----->Vector<String> vector1 = new Vector<>();
+
+ 2. With initial capacity
+----->Vector<Integer> vector2 = new Vector<>(20);
+
+ 3. With initial capacity and capacity increment
+----->Vector<Double> vector3 = new Vector<>(10, 5);
+
+ 4. Creating from another collection
+----->List<String> list = DSA_Level_1.C_Arrays.asList("A", "B", "C");
+----->Vector<String> vector4 = new Vector<>(list);
+
+<----->Performance Considerations<----->
+----->Access Time: O(1) for get/set operations (same as ArrayList)
+----->Insertion/Deletion: O(1) at end (amortized)
+                          O(n) at beginning/middle (needs to shift elements)
+----->Synchronization Overhead: Each operation has synchronization cost
+----->Memory: Similar to ArrayList, but may have more unused capacity
+
+<----->When to Use Vectors<----->
+----->Consider using Vector when:
+----->You need thread-safe operations without external synchronization
+----->Working with legacy code that requires Vector
+----->You need Enumeration support
+----->Otherwise, prefer ArrayList for better performance.
+
+<------>Common Methods<------>
+-->Core Methods
+----->add(element), add(index, element)
+----->get(index)
+----->set(index, element)
+----->remove(index), remove(element)
+----->size(), isEmpty()
+----->contains(element)
+----->indexOf(element), lastIndexOf(element)
+
+-->Vector-Specific Methods
+----->addElement(element) - synchronized add
+----->removeElement(element) - synchronized remove
+----->removeElementAt(index) - synchronized remove by index
+----->firstElement(), lastElement()
+----->elements() - returns Enumeration
+----->capacity() - returns current capacity
+----->ensureCapacity(minCapacity) - increases capacity if needed
+----->trimToSize() - trims capacity to current size
+----->setSize(newSize) - sets the size (may truncate or add nulls)
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+(3)-----> LinkedList
+
+LinkedList is a linear data structure in Java that implements the List and Deque interfaces.
+Unlike ArrayList, it stores elements in nodes where each node contains:
+-->Data (the element)
+-->Pointer to the next node
+-->Pointer to the previous node (in Doubly LinkedList)
+
+-->Types of LinkedList
+----->Singly LinkedList (Only next pointer)
+----->Doubly LinkedList (next & prev pointers) → Java uses this
+----->Circular LinkedList (Last node points to head)
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

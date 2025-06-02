@@ -1,0 +1,155 @@
+
+A HashMap in Java is a part of the Java Collections Framework and implements the Map interface.
+It stores data in key-value pairs and uses hashing to provide efficient insertion, deletion,
+and retrieval operations (average O(1) time complexity).
+
+The four main components of a HashMap in Java are:
+
+1. Key
+-->The identifier used to retrieve a value.
+-->Must be unique.
+-->Can be null (only one allowed).
+
+2. Value
+-->The data associated with a key.
+-->Can be duplicate or null.
+
+3. Hash Function
+-->Converts the key’s hashCode() into a valid bucket index.
+-->Ensures fast access by minimizing collisions.
+
+4. Bucket (Entry Array)
+-->Array of entries where key-value pairs are stored.
+-->Uses chaining (linked list or tree) to handle collisions.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+1. HashMap Basics
+
+Features
+-->Stores key-value pairs (keys must be unique).
+-->Allows one null key and multiple null values.
+-->Not thread-safe (Use ConcurrentHashMap or Collections.synchronizedMap() for thread safety).
+-->No order guarantee (Use LinkedHashMap for insertion-order or TreeMap for sorted order).
+
+Internal Working
+-->Uses an array of buckets (default capacity: 16).
+-->Each bucket is a linked list (or tree if too many collisions).
+-->Hashing: hashCode() determines the bucket index.
+-->Load Factor (default: 0.75): When the map is 75% full, it doubles its capacity.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+
+2. HashMapBasicOperation.java
+Purpose: Demonstrates basic operations on a HashMap.
+Key Methods:
+
+-->put(key, value): Adds key-value pairs.
+-->get(key): Retrieves the value for a given key.
+-->containsKey(key)/containsValue(value): Checks if a key or value exists.
+-->remove(key): Deletes an entry.
+-->map.put("Key","Value");
+-->size(): Returns the number of entries.
+-->clear(): Removes all entries.
+-->isEmpty(): Checks if the map is empty.
+
+Note: Shows fundamental CRUD operations and utility methods.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+3. HashMapComputeMethods.java
+Purpose: Illustrates advanced computation methods for modifying HashMap entries.
+Key Methods:
+
+-->computeIfAbsent(key, function): Adds a key with a computed value if absent.
+-->computeIfPresent(key, function): Updates a key's value if present.
+-->compute(key, function): Conditionally updates or adds a value based on the current value (handles null).
+-->Note: Useful for dynamic updates without explicit null checks.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+4. HashMapCreation.java
+Purpose: Shows different ways to create a HashMap.
+
+Constructors:
+-->Default constructor (new HashMap<>()).
+-->With initial capacity (new HashMap<>(16)).
+-->With capacity and load factor (new HashMap<>(16, 0.75f)).
+-->From an existing map (new HashMap<>(map1)).
+
+Note: Highlights performance-tuning options (capacity/load factor) and copying maps.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+5. HashMapIteration.java
+Purpose: Demonstrates how to iterate over a HashMap.
+
+Methods:
+-->entrySet(): Iterates over key-value pairs (Map.Entry).
+-->keySet(): Iterates over keys.
+-->values(): Iterates over values.
+
+Note: Covers all common iteration approaches using enhanced for loops.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+6. HashMapMerge.java
+Purpose: Demonstrates the merge() method in HashMap.
+Key Insight:
+-->The merge() method is used to combine values when a key already exists or insert a new key-value pair if the key is absent. It takes three arguments: the key, a default value, and a remapping function that defines how to merge the old and new values.
+
+Behavior:
+
+-->If the key exists, the remapping function is applied to the old and new values.
+
+-->If the key is absent, the key is added with the default value.
+
+Use Case:
+-->Ideal for scenarios like incrementing counters, aggregating data, or conditionally updating values without explicit null checks.
+
+2. HashMapNullHandling.java
+Purpose: Explores how HashMap handles null keys and values.
+Key Insight:
+
+-->Null Keys: HashMap allows exactly one null key. Subsequent null keys overwrite the existing entry.
+
+-->Null Values: Multiple null values are permitted for different keys.
+
+Comparison with Other Maps:
+
+-->TreeMap and ConcurrentHashMap do not allow null keys (throws NullPointerException).
+
+-->LinkedHashMap permits null keys/values like HashMap.
+
+Practical Implication:
+-->Useful when null is a valid identifier (e.g., representing unknown or default keys), but requires caution to avoid unintended overwrites.
+
+3. ThreadSafeHashMap.java
+Purpose: Discusses thread-safe alternatives to HashMap.
+Key Insight:
+
+-->Issue with HashMap: Not thread-safe; concurrent modifications can cause ConcurrentModificationException or data corruption.
+
+---->Solutions:
+
+---->Collections.synchronizedMap():
+
+----->Wraps HashMap with synchronized methods.
+
+----->Drawback: Uses a single lock (poor scalability under high contention).
+
+---->ConcurrentHashMap:
+
+----->Uses fine-grained locking (segment-level or CAS operations).
+
+----->Supports atomic operations (e.g., putIfAbsent, compute).
+
+----->Advantage: Higher throughput in multi-threaded environments.
+
+-->When to Use:
+
+---->synchronizedMap: Legacy systems or low-concurrency use cases.
+
+---->ConcurrentHashMap: Modern applications requiring high concurrency (e.g., caches, real-time processing).

@@ -1,0 +1,75 @@
+LinkedHashMap
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+--> Short Summary
+- LinkedHashMap is a subclass of HashMap in Java.
+- It maintains a doubly linked list running through all its entries.
+- This linked list preserves the insertion order or access order of elements.
+- By default, it maintains insertion order (order in which entries were added).
+- If created with access order mode (accessOrder = true), it maintains access order (recently accessed entries move to the end).
+- Slightly slower than HashMap due to the overhead of maintaining the linked list.
+- Useful when you need a map with predictable iteration order.
+- Commonly used in LRU cache implementations to track least recently used entries.
+- Not thread-safe like HashMap.
+- Time complexity for basic operations is still approximately O(1).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+Methods :
+
+🔹 1. put(K key, V value)
+-->Purpose: Adds a key-value pair to the map.
+-->If key exists: Replaces its value.
+-->Insertion order is maintained.
+
+🔹 2. get(Object key)
+-->Purpose: Retrieves the value associated with the given key.
+-->Returns: The value if key exists, otherwise null.
+
+🔹 3. remove(Object key)
+-->Purpose: Deletes the entry with the given key from the map.
+-->Returns: The removed value or null if the key wasn't present.
+
+🔹 4. containsKey(Object key)
+-->Purpose: Checks whether the map contains the specified key.
+-->Returns: true or false.
+
+🔹 5. containsValue(Object value)
+-->Purpose: Checks whether the map contains the specified value.
+-->Returns: true or false.
+
+🔹 6. size()
+-->Purpose: Returns the number of key-value pairs in the map.
+
+🔹 7. isEmpty()
+-->Purpose: Checks whether the map has no entries.
+-->Returns: true if empty, false otherwise.
+
+🔹 8. clear()
+-->Purpose: Removes all entries from the map.
+
+🔹 9. keySet()
+-->Purpose: Returns a Set of all the keys in insertion order.
+
+🔹 10. values()
+-->Purpose: Returns a Collection of all the values in insertion order.
+
+🔹 11. entrySet()
+-->Purpose: Returns a Set of all key-value pairs (Map.Entry objects).
+-->Useful for: Iterating over both key and value.
+
+🔹 12. replace(K key, V value)
+-->Purpose: Replaces the value of the specified key only if it exists.
+-->Returns: The old value or null if key not found.
+
+🔹 13. putIfAbsent(K key, V value)
+-->Purpose: Inserts the key-value pair only if the key is not already present.
+
+🔹 14. clone()
+-->Purpose: Creates a shallow copy of the LinkedHashMap.
+
+🔹 15. forEach(BiConsumer<K, V>)
+-->Purpose: Performs an action for each key-value pair using a lambda or method reference.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

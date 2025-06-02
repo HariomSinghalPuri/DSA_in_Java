@@ -1,0 +1,44 @@
+🧠 What is EnumMap in Java?
+EnumMap is a specialized Map implementation for use with enum type keys. It's efficient, fast, and compact since it uses arrays internally based on enum ordinal values.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+🧩 Key Features of EnumMap
+
+< Features >	        < Description >
+Enum-specific	        |--> Keys must be of a single enum type.
+Fast and efficient	    |--> Backed by an array for speed.
+Maintains enum order	|--> Keys are ordered by enum declaration.
+Null keys not allowed	|--> Throws NullPointerException.
+Values can be null	    |--> Unlike ConcurrentHashMap, null values are allowed.
+Not thread-safe	        |--> Use external synchronization if accessed by multiple threads.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+EnumMap_Demo.java
+
+🧠 Short Notes on Each Method
+< Method >	                < Description >
+put(K, V)	                |--> Adds or replaces mapping for the enum key.
+get(Object key)	            |--> Retrieves value for the specified key.
+putIfAbsent(K, V)	        |--> Adds only if key is not already mapped.
+remove(Object key)	        |--> Removes the mapping for the specified key.
+remove(K, V)	            |--> Removes entry if it maps to the given value.
+replace(K, V)	            |--> Replaces the value for the key.
+replace(K, oldV, newV)	    |--> Replaces if old value matches.
+containsKey(Object key)	    |--> Checks if key is in map.
+containsValue(Object value)	|--> Checks if value is in map.
+keySet()	                |--> Returns all keys.
+values()	                |--> Returns all values.
+entrySet()	                |--> Returns all key-value entries.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ When to Use EnumMap
+
+Use EnumMap when:
+|--> Keys are from a single enum type.
+|--> You need a high-performance map with predictable ordering.
+|--> Thread-safety is not a concern or will be externally handled.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+

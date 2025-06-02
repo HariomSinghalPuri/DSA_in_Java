@@ -1,0 +1,44 @@
+✅ Simple Explanation: What is PriorityBlockingQueue?
+PriorityBlockingQueue is an unbounded, thread-safe, blocking queue that orders its elements based on their natural
+ordering or a custom comparator.
+It is part of java.util.concurrent and combines priority-based ordering with concurrent access and blocking retrieval.
+Unlike most other queues, the element with the highest priority (lowest value) is retrieved first, regardless of
+insertion order.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Features
+|---▶ Thread-safe — supports concurrent access and blocking operations.
+|---▶ Unbounded capacity — dynamically grows as needed.
+|---▶ Ordered by priority — based on Comparable or a custom Comparator.
+|---▶ No null elements — throws NullPointerException.
+|---▶ Non-FIFO behavior — prioritizes elements instead of following insertion order.
+|---▶ Blocking operations supported — take(), put(), etc.
+|---▶ Efficient for producer-consumer systems with priority scheduling.
+
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+✅ Explanation of Methods Used in PriorityBlockingQueue_Demo.java
+
+Method	        Description
+put(E e)	--> Inserts the specified element into the queue (non-blocking since it’s unbounded).
+peek()	    --> Returns, but does not remove, the head of the queue — the element with the highest priority.
+take()	    --> Retrieves and removes the head of the queue, waiting if necessary until an element becomes available.
+poll()	    --> Retrieves and removes the head of the queue, or returns null if the queue is empty.
+isEmpty()	--> Returns true if the queue contains no elements.
+size()	    --> Returns the number of elements in the queue.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ Some Important Points That Should Be Noted:
+|---▶ PriorityBlockingQueue is ideal for priority scheduling, task ordering, and message processing.
+|---▶ Unlike most queues, it does not guarantee FIFO order — it’s based on priority.
+|---▶ Internally implemented using a heap-based structure.
+|---▶ Elements must be either Comparable or inserted using a Comparator.
+|---▶ It's unbounded, so it never blocks on put(), but blocks on take() if empty.
+|---▶ Iterators do not guarantee order, and are weakly consistent.
+|---▶ Does not support elements being null.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+

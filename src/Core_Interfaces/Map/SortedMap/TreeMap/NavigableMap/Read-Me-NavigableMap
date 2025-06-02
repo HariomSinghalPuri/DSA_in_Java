@@ -1,0 +1,41 @@
+📘 What is NavigableMap in Java?
+NavigableMap is an extension of SortedMap that provides navigation methods for accessing entries closest to a given
+key. It is implemented by TreeMap.
+
+🧩 Key Features of NavigableMap
+< Feature >	        < Description >
+Sorted	            |--> Keys are maintained in ascending order.
+Navigation	        |--> Allows fetching nearest entries (lower, higher, floor, ceiling).
+Sub-ranges	        |--> Supports reverse views, head/tail/sub maps with inclusion flags.
+Descending Views	|--> Provides descendingMap() and descendingKeySet().
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+NavigableMap_Demo.java
+
+🧠 Short Notes on Each Method
+
+< Method >	        < Description >
+lowerKey(K key)          	|--> Returns greatest key < given key.
+floorKey(K key)	            |--> Returns greatest key ≤ given key.
+ceilingKey(K key)	        |--> Returns smallest key ≥ given key.
+higherKey(K key)	        |--> Returns smallest key > given key.
+pollFirstEntry()	        |--> Removes and returns first (lowest) entry.
+pollLastEntry()	            |--> Removes and returns last (highest) entry.
+descendingMap()         	|--> Returns reverse-ordered view of map.
+descendingKeySet()	        |--> Returns keys in descending order.
+subMap(fromKey, fromInclusive, toKey, toInclusive)	|--> Returns view in range with bounds.
+headMap(toKey, inclusive)	|--> Returns view of keys ≤ or < toKey.
+tailMap(fromKey, inclusive)	|--> Returns view of keys ≥ or > fromKey.
+keySet()	                |--> Returns all current keys in ascending order.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ When to Use NavigableMap
+|--> Use NavigableMap when you need:
+|--> Closest-key queries (floor, ceiling, etc.)
+|--> Custom range views with inclusivity
+|--> Reversed ordering (descendingMap())
+|--> 🧠 Best used with TreeMap, which is the only built-in class implementing NavigableMap.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>

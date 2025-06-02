@@ -1,0 +1,41 @@
+🌳 What is TreeMap in Java?
+TreeMap is a Map implementation that stores key-value pairs in a Red-Black Tree, keeping keys in sorted order (either natural or by a Comparator).
+
+🧩 Key Features of TreeMap
+< Features >         < Description >
+
+|--> Sorted	        |--> Maintains keys in ascending order by default.
+|--> No null keys	|--> Throws NullPointerException if you try to insert a null key.
+|--> Efficient	    |--> Logarithmic time (O(log n)) for get(), put(), remove().
+|--> Implements	    |--> NavigableMap, which extends SortedMap.
+|--> Thread-safety	|--> Not synchronized by default (use Collections.synchronizedMap() if needed).
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+TreeMap_Demo.java
+
+📘 Short Notes on Each Method
+< Method >	                < Description >
+
+put(K, V)	                |--> Inserts or replaces a key-value pair in sorted order.
+get(Object key)	            |--> Returns the value for the given key.
+remove(Object key)	        |--> Removes the entry with the given key.
+containsKey(Object key)	    |--> Checks if the key is present.
+containsValue(Object value)	|--> Checks if the value is present.
+size()	                    |--> Returns number of entries.
+isEmpty()	                |--> Checks if map is empty.
+keySet()	                |--> Returns a sorted set of keys.
+values()	                |--> Returns collection of values in key order.
+entrySet()	                |--> Returns set of key-value entries in key order.
+firstKey()	                |--> Gets the smallest key.
+lastKey()	                |--> Gets the largest key.
+headMap(K toKey)	        |--> Returns view of map where keys < toKey.
+tailMap(K fromKey)	        |--> Returns view where keys ≥ fromKey.
+subMap(K fromKey, K toKey)	|--> Returns keys in the given range.
+
+<<<<<-------------------------------------------------------------------------------------------------------------->>>>>
+
+✅ When to Use TreeMap
+|--> When sorted key order is essential.
+|--> For range operations (e.g., get all keys from A to B).|-->
+|--> As a replacement for SortedMap, since TreeMap is its main implementation.
