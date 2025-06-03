@@ -6,6 +6,7 @@ public class Q9_Prime_Factorization{
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        System.out.println("Enter Your Number : ");
         int n = scn.nextInt();
 
         // Approach 1
