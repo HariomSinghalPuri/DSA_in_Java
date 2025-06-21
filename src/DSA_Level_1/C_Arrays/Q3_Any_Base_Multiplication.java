@@ -1,10 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
 import java.util.*;
 
 // Any Base Multiplication
 
-public class Q3{
+public class Q3_Any_Base_Multiplication {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

@@ -1,10 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
 // Any Base Addition
 
 import java.util.*;
 
-public class Q2{
+public class Q2_Any_Base_Addition {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

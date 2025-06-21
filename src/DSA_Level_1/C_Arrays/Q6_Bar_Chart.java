@@ -1,10 +1,9 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
-import java.io.*;
+package DSA_Level_1.C_Arrays;
 import java.util.*;
 
-// Bar Chart
+// Bar_Chart
 
-public class Q6{
+public class Q6_Bar_Chart {
 
     public static void main(String[] args) throws Exception {
         // write your code here

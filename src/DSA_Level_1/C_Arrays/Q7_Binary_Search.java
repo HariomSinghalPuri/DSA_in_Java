@@ -1,6 +1,6 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-// Binary Search :-
+// Binary_Search :-
 
 //public int search(int[] arr, int target) {
 //    int left = 0, right = arr.length - 1;
@@ -31,7 +31,7 @@ package DSA_Level_1.C_Arrays.Getting_Started;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q7 {
+public class Q7_Binary_Search {
 
     public static int binarySearch(int[] arr, int target) {
         int left = 0;

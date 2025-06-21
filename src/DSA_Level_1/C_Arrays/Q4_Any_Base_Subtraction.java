@@ -1,10 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
 import java.util.*;
 
-//Any Base Subtraction
+//Any_Base_Subtraction
 
-public class Q4{
+public class Q4_Any_Base_Subtraction {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

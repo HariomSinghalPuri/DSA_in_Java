@@ -1,11 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-// Linear Search
+// Linear_Search
 
-import java.io.*;
 import java.util.*;
 
-public class Q13{
+public class Q13_Linear_Search {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);

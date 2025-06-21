@@ -1,10 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
 import java.util.*;
 
-// Digit Frequency
+// Digit_Frequency
 
-public class Q10 {
+public class Q10_Digit_Frequency {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

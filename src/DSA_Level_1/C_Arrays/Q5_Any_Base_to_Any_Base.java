@@ -1,9 +1,9 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 import java.util.*;
 
-// Any Base to Any Base
+// Any_Base_to_Any_Base
 
-public class Q5{
+public class Q5_Any_Base_to_Any_Base {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

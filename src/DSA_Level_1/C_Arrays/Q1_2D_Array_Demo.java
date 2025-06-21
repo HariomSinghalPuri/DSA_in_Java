@@ -1,13 +1,12 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-import java.io.*;
 import java.util.*;
 
 
  // 2D Array Demo
 
 
-public class Q1{
+public class Q1_2D_Array_Demo {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);

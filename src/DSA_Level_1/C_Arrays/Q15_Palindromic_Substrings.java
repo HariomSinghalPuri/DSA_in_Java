@@ -1,11 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-// Palindromic Substrings
+// Palindromic_Substrings
 
-import java.io.*;
 import java.util.*;
 
-public class Q15 {
+public class Q15_Palindromic_Substrings {
 
     public static boolean isPalindrome(String str)
     {

@@ -1,11 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-// Exit Point of Matrix
+// Exit_Point_of_Matrix
 
-import java.io.*;
 import java.util.*;
 
-public class Q11 {
+public class Q11_Exit_Point_of_Matrix {
 
     public static void main(String[] args) throws Exception     {
         // write your code here

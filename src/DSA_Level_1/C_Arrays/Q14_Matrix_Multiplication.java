@@ -1,11 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-// Matrix Multiplication
+// Matrix_Multiplication
 
-import java.io.*;
 import java.util.*;
 
-public class Q14{
+public class Q14_Matrix_Multiplication {
 
     public static void main(String[] args) throws Exception {
         // write your code here

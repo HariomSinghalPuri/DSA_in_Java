@@ -1,11 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-import java.io.*;
 import java.util.*;
 
-// Difference of 2 Arrays
+// Difference_of 2_Arrays
 
-public class Q9{
+public class Q9_Difference_of_2_Arrays {
 
     public static void main(String[] args) throws Exception {
         // write your code here

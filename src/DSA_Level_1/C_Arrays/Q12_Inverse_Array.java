@@ -1,11 +1,10 @@
-package DSA_Level_1.C_Arrays.Getting_Started;
+package DSA_Level_1.C_Arrays;
 
-// Inverse Array
+// Inverse_Array
 
 import java.io.*;
-import java.util.*;
 
-public class Q12{
+public class Q12_Inverse_Array {
     public static void display(int[] a){
         StringBuilder sb = new StringBuilder();
 
