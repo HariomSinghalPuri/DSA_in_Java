@@ -2,7 +2,7 @@ package DSA_Level_1.D_Searching_and_Sorting;
 
 import java.util.*;
 
-public class Bubble_Sort {
+public class Q1_Bubble_Sort {
 
     public static void bubbleSort(int[] arr) {
         //write your code here
