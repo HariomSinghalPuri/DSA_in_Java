@@ -2,7 +2,7 @@ package DSA_Level_1.D_Searching_and_Sorting.Divide_and_Conquer_Sorting;
 
 import java.util.*;
 
-public class Q4_Merge_Sort {
+public class Q1_Merge_Sort {
 //   public static void mergeSort(int[] arr, int left, int right) {
 //     // base case
 //     if(left == right)
