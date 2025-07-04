@@ -1,8 +1,8 @@
-package DSA_Level_1.D_Searching_and_Sorting;
+package DSA_Level_1.D_Searching_and_Sorting.Basic_Sorting_Algorithm;
 
 import java.util.*;
 
-public class Q2_Count_Sort {
+public class Q2_Selection_Sort {
 
     public static void countSort(int[] arr, int min, int max) {
         // Create Frequency of size equal to range of elements

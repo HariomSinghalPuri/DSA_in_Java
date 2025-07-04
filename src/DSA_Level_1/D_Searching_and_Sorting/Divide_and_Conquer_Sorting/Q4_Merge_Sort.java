@@ -1,4 +1,4 @@
-package DSA_Level_1.D_Searching_and_Sorting;
+package DSA_Level_1.D_Searching_and_Sorting.Divide_and_Conquer_Sorting;
 
 import java.util.*;
 
