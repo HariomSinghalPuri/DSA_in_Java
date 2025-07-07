@@ -1,8 +1,8 @@
-package DSA_Level_1.D_Searching_and_Sorting;
+package DSA_Level_1.D_Searching_and_Sorting.F_Array_Merging;
 
 import java.util.*;
 
-public class Q5_Merge_Two_Sorted_Array {
+public class Q1_Merge_Two_Sorted_Array {
 
     public static int[] mergeTwoSortedArrays(int[] a, int[] b){
         //write your code here

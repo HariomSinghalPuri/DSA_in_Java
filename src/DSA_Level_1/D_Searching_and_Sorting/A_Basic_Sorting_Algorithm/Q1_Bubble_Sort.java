@@ -1,4 +1,4 @@
-package DSA_Level_1.D_Searching_and_Sorting.Basic_Sorting_Algorithm;
+package DSA_Level_1.D_Searching_and_Sorting.A_Basic_Sorting_Algorithm;
 
 import java.util.*;
 
