@@ -8,6 +8,7 @@ public class Q3 {
         Scanner scn = new Scanner(System.in);
 
         // write ur code here
+        System.out.println("Enter Your Number :");
         int n = scn.nextInt();
 
         int stars = 1;
