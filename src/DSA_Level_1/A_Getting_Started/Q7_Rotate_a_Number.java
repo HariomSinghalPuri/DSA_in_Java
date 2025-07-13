@@ -29,8 +29,5 @@ public class Q7_Rotate_a_Number {
         int r = n % div;
         r = r * mult + q;
         System.out.println("The Rotated Number is: " +r);
-
-
-        
     }
 }
