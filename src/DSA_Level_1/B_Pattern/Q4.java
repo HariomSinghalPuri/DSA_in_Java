@@ -14,7 +14,6 @@ public class Q4 {
                 System.out.print("\t");
             for(int j = 1; j <= stars; j++)
                 System.out.print("*\t");
-
             System.out.println();
             spaces++;
             stars--;
