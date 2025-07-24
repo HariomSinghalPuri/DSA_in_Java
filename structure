@@ -1,14 +1,18 @@
 
-DSA\
-   |---src\
-          |---DSA_Level_1.C_Arrays\
-              |    |---Questions\
-              |    |            |---Q1_Taking_user_Input.java
-              |    |            |--- .....
-              |    |
-              |    |---ArrayListExample.java
-              |    |---ColNoFixed.java
-              |    |--- .....
+  DSA\
+      |---src\
+              |
+              |--- Basics_Of_Java\
+              |                  |
+              |                  |---Rev_01_......Files (Contains Revision Of Java)
+              |                  |
+              |                  |---OOP\
+              |                         |
+              |                         |--- Abstraction
+              |                         |--- BasicOOP
+              |                         |--- Equals
+              |                         |--- Inheritance
+              |
               |
               |---Core_Interfaces\
               |                  |
@@ -192,6 +196,39 @@ DSA\
               |                         |---Set_Demo.java
               |
               |
+              |--- DSA_Level_1\
+              |               |
+              |               |---A_Getting_started\
+              |               |---B_Pattern
+              |               |---C_Arrays\
+              |               |            |
+              |               |            |--- A_Arrays_and_Matrix_Operation
+              |               |            |--- B_Number_Base_Conversion
+              |               |            |--- C_String_Operation
+              |               |            |--- D_Searching_and_Sorting
+              |               |            |--- D_Subarrays_and_Subsets
+              |               |            |--- E_Miscellaneous
+              |               |
+              |               |---D_Searching_and_Sorting\
+              |               |                            |
+              |               |                            |--- A_Basic_Sorting_Algorithm
+              |               |                            |--- B_Divide_and_Conquer_Sorting
+              |               |                            |--- C_Linear_Time_Sorting
+              |               |                            |--- D_Selection_Algorithm
+              |               |                            |--- E_Partitioning_Problems
+              |               |                            |--- F_Array_Merging
+              |               |---E_Recursion\
+              |               |               |--- A_Basic_Recursion
+              |               |               |--- B_Array_Recursion
+              |               |               |--- C_String_Sequence_Recursion
+              |               |               |---
+              |               |               |---
+              |               |
+              |               |
+              |               |
+              |               |
+              |               |
+              |               |
               |
               |
               |
@@ -318,11 +355,11 @@ DSA\
               |
               |
               |
-              |
-              |
-              |
-              |
-              |
-              |
-              |
-              |
+              |--- File_Handling\
+                                |--- T1_CreatingTXTFile
+                                |--- T2_WritinginFile
+                                |--- T3_ReadingFile
+                                |--- T4_DeletingFile
+
+
+
