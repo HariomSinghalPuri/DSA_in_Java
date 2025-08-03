@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Q1_IsNumPrime {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Your Number: ");
+        System.out.print("Enter Your Number by your choice: ");
         int t = sc.nextInt();
         for(int i = 0 ; i < t ; i++ ){
             int n = sc.nextInt();
