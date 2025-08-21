@@ -221,10 +221,16 @@
               |               |               |--- A_Basic_Recursion
               |               |               |--- B_Array_Recursion
               |               |               |--- C_String_Sequence_Recursion
-              |               |               |---
-              |               |               |---
+              |               |               |--- D_Path_Problems
+              |               |               |--- E_Advanced_Problems
               |               |
-              |               |
+              |               |---F_Stack_And_Queue\
+              |               |                     |--- A_StackAndQueue_Classes
+              |               |                     |--- B_Stack_Based_Problems
+              |               |                     |--- C_Queue_Based_Problems
+              |               |                     |--- D_Next_Greater_Smaller_Element_Problems
+              |               |                     |---
+              |               |                     |---
               |               |
               |               |
               |               |
