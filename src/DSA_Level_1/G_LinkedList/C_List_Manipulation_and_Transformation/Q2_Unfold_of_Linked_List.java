@@ -10,6 +10,7 @@ class Q2_Unfold_of_Linked_List {
         ListNode(int val) {
             this.val = val;
         }
+
     }
 
     public static ListNode reverse(ListNode head) {
